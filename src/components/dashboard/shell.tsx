@@ -60,7 +60,7 @@ export function DashboardShell({ role, children }: { role: Role; children: React
   const [open, setOpen] = useState(false);
   const items = MENUS[role];
 
-  // Overview links are roots, so match them exactly; the rest by prefix
+
   const isActive = (href: string) => (ROOTS.includes(href) ? pathname === href : pathname.startsWith(href));
 
   const nav = (
@@ -95,7 +95,7 @@ export function DashboardShell({ role, children }: { role: Role; children: React
         {nav}
       </aside>
 
-      {/* Mobile / tablet drawer */}
+
       {open && (
         <div className="fixed inset-0 z-40 lg:hidden">
           <button
