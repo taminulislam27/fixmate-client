@@ -19,7 +19,7 @@ import { Avatar } from "./avatar";
 
 const ROLE_LABEL: Record<string, string> = { customer: "Customer", technician: "Technician", admin: "Admin" };
 
-/** Avatar + dropdown (name, role badge, Dashboard, Update Profile, Sign Out). Used in navbar and dashboard top bar. */
+
 export function UserMenu({ showName = false }: { showName?: boolean }) {
   const { data } = useSession();
   const router = useRouter();

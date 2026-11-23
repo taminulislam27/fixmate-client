@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { STATUS_LABELS, STATUS_STYLES } from "@/lib/constants";
 
-/** Single badge used by every dashboard so colours never drift. */
+
 export function StatusBadge({ status, className }: { status: string; className?: string }) {
   return (
     <span

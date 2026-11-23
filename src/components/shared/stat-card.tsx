@@ -2,7 +2,7 @@ import type { LucideIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
-/** Reusable stats card for every dashboard overview. */
+
 export function StatCard({
   label,
   value,
