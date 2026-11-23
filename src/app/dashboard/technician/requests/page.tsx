@@ -71,7 +71,6 @@ export default function RequestsPage() {
     if (ok) setCompleting(null);
   }
 
-  /** Only the valid next action(s) for each status are rendered. */
   const actions = (j: Job) => {
     const busy = busyId === j._id;
     if (j.status === "requested")
