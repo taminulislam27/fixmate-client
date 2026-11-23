@@ -17,7 +17,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { STATUS_LABELS } from "@/lib/constants";
 
-/** Same hue per status as the badges (requested=blue, accepted=indigo, in-progress=amber, ...). */
+
 const STATUS_COLORS: Record<string, string> = {
   requested: "#3b82f6",
   accepted: "#6366f1",

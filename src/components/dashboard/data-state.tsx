@@ -4,7 +4,7 @@ import { AlertTriangle, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 
-/** Shows skeleton rows while loading and a retry card on failure, otherwise the children. */
+
 export function DataState({
   loading,
   error,
