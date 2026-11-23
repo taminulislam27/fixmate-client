@@ -81,7 +81,7 @@ export default function MyBookingsPage() {
 
   const amount = (b: Booking) => (b.status === "completed" || b.paymentStatus === "paid" ? b.finalAmount : b.basePrice);
 
-  /** Buttons obey the brief: Cancel only when requested; Pay Now only when completed + unpaid; Paid badge otherwise. */
+
   const actions = (b: Booking) => (
     <div className="flex flex-wrap items-center gap-2">
       <Button size="sm" variant="outline" onClick={() => setTrack(b)}>
@@ -125,7 +125,7 @@ export default function MyBookingsPage() {
         ) : (
           data && (
             <>
-              {/* Table on tablets and desktops */}
+
               <Card className="hidden overflow-x-auto md:block">
                 <table className="w-full min-w-[860px] text-left text-sm">
                   <thead className="border-b bg-muted/60 text-xs uppercase tracking-wider text-muted-foreground">
@@ -144,7 +144,7 @@ export default function MyBookingsPage() {
                       <tr key={b._id} className="align-middle">
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-3">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
+
                             <img src={b.serviceImage} alt="" className="h-12 w-16 rounded-md object-cover" />
                             <div className="min-w-0">
                               <p className="max-w-[14rem] truncate font-semibold">{b.serviceTitle}</p>
@@ -164,12 +164,12 @@ export default function MyBookingsPage() {
                 </table>
               </Card>
 
-              {/* Cards on mobile */}
+
               <div className="space-y-4 md:hidden">
                 {data.map((b) => (
                   <Card key={b._id} className="overflow-hidden">
                     <div className="flex gap-3 p-4">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
+
                       <img src={b.serviceImage} alt="" className="h-16 w-20 shrink-0 rounded-md object-cover" />
                       <div className="min-w-0 flex-1">
                         <p className="truncate font-display font-bold">{b.serviceTitle}</p>
