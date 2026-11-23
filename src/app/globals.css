@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* FixMate palette: deep workshop teal + safety orange on warm paper */
+    --background: 40 33% 97%;
+    --foreground: 195 45% 12%;
+    --ink: 195 60% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 195 45% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 195 45% 12%;
+    --primary: 192 72% 22%;
+    --primary-foreground: 40 33% 98%;
+    --secondary: 38 40% 92%;
+    --secondary-foreground: 195 45% 14%;
+    --muted: 38 25% 93%;
+    --muted-foreground: 195 15% 38%;
+    --accent: 22 94% 54%;
+    --accent-foreground: 195 60% 9%;
+    --destructive: 0 72% 46%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 35 20% 86%;
+    --input: 35 20% 82%;
+    --ring: 22 94% 54%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 196 40% 8%;
+    --foreground: 40 30% 94%;
+    --ink: 196 55% 6%;
+    --card: 196 35% 11%;
+    --card-foreground: 40 30% 94%;
+    --popover: 196 35% 11%;
+    --popover-foreground: 40 30% 94%;
+    --primary: 22 94% 56%;
+    --primary-foreground: 196 60% 8%;
+    --secondary: 196 25% 16%;
+    --secondary-foreground: 40 30% 94%;
+    --muted: 196 25% 15%;
+    --muted-foreground: 195 12% 66%;
+    --accent: 22 94% 56%;
+    --accent-foreground: 196 60% 8%;
+    --destructive: 0 70% 52%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 196 20% 20%;
+    --input: 196 20% 24%;
+    --ring: 22 94% 56%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+  /* One heading style for every section (brief: keep headings consistent) */
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl;
+  }
+  .section-sub {
+    @apply mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground;
+  }
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.18em] text-accent;
+  }
+  .dot-grid {
+    background-image: radial-gradient(hsl(var(--primary-foreground) / 0.12) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+}
