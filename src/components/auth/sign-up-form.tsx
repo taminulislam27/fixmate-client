@@ -51,7 +51,7 @@ export function SignUpForm() {
       name: form.name.trim(),
       email: form.email.trim().toLowerCase(),
       password: form.password,
-      role, // the server hook still forces anything except technician back to customer
+      role, 
     } as Parameters<typeof signUp.email>[0]);
     setLoading(false);
 

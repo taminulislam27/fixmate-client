@@ -41,7 +41,7 @@ export function SignInForm() {
       return;
     }
 
-    // go back to where the user was heading, otherwise to their own dashboard
+
     const wanted = params.get("redirect");
     const safe = wanted && wanted.startsWith("/") && !wanted.startsWith("//") ? wanted : null;
     const session = await authClient.getSession();
