@@ -26,7 +26,7 @@ interface Service {
 }
 
 export default function AdminServicesPage() {
-  // The server returns pending first, so new listings are the first thing the admin sees
+
   const [filter, setFilter] = useState("");
   const { data, loading, error, reload } = useApi<Service[]>("/api/admin/services", { status: filter || undefined });
   const [busyId, setBusyId] = useState<string | null>(null);
