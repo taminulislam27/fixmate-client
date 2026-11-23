@@ -11,7 +11,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-/** Confirmation modal for delete / cancel / reject actions (brief: Confirmation Modals). */
+
 export function ConfirmDialog({
   open,
   onOpenChange,
