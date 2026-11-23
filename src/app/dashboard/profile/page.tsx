@@ -24,7 +24,7 @@ export default function ProfilePage() {
   const [saving, setSaving] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
-  // fill the form once the session arrives
+
   useEffect(() => {
     if (user) {
       setForm({
@@ -35,7 +35,7 @@ export default function ProfilePage() {
         image: user.image || "",
       });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [user?.email, isPending]);
 
   async function onFile(e: React.ChangeEvent<HTMLInputElement>) {
@@ -59,7 +59,7 @@ export default function ProfilePage() {
     if (form.name.trim().length < 2) return void setNameErr("Name must be at least 2 characters");
     setNameErr("");
     setSaving(true);
-    // updateUser writes to MongoDB and refreshes the session, so navbar + top bar update without signing out
+
     const { error } = await authClient.updateUser({
       name: form.name.trim(),
       image: form.image || undefined,
