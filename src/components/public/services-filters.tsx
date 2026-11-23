@@ -7,10 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input, Select } from "@/components/ui/input";
 import { CATEGORIES, SERVICE_MODES } from "@/lib/constants";
 
-/**
- * Search / filter / sort controls. They only write to the URL query string;
- * the server page then asks MongoDB for the result (Challenge 1), so filters survive a reload.
- */
+
 export function ServicesFilters() {
   const router = useRouter();
   const pathname = usePathname();
