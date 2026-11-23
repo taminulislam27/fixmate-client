@@ -4,10 +4,6 @@ import { getSession } from "@/lib/session";
 
 export const dynamic = "force-dynamic";
 
-/**
- * Bridges BetterAuth -> Express. The logged-in user gets a short-lived JWT signed with the secret
- * shared with the server. The server still re-reads the role from MongoDB on every request.
- */
 export async function GET() {
   const session = await getSession();
   if (!session) return NextResponse.json({ message: "Not signed in" }, { status: 401 });

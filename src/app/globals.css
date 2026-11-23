@@ -4,7 +4,6 @@
 
 @layer base {
   :root {
-    /* FixMate palette: deep workshop teal + safety orange on warm paper */
     --background: 40 33% 97%;
     --foreground: 195 45% 12%;
     --ink: 195 60% 11%;
@@ -60,7 +59,7 @@
   body {
     @apply bg-background font-sans text-foreground antialiased;
   }
-  /* One heading style for every section (brief: keep headings consistent) */
+
   h1,
   h2,
   h3 {
