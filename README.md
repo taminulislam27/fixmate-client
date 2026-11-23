@@ -2,9 +2,9 @@
 
 FixMate is a role-based repair service platform. Verified **technicians** list repair services, **customers** browse them, send repair requests, follow each job step by step and **pay only after the job is completed**. **Admins** approve listings, manage users and monitor jobs and Stripe revenue.
 
-- **Live site:** `https://<your-client>.vercel.app` _(replace after deploying)_
-- **Server repo:** `<link to fixmate-server repo>`
-- **API (live):** `https://<your-server>.vercel.app`
+- **Live site:** [FixMate](https://fixmate-client-pink.vercel.app/)
+- **Server repo:** [fixmate-server](https://github.com/taminulislam27/fixmate-server)
+- **API (live):** [live-api](https://fixmate-server-psi.vercel.app/)
 
 ## Test accounts
 
