@@ -14,7 +14,6 @@ const STEPS = [
   { key: "paid", label: "Paid" },
 ];
 
-/** Visual step tracker built from the booking's statusHistory array. */
 export function JobTimeline({ history = [], status }: { history?: HistoryItem[]; status: string }) {
   const at = (key: string) => history.find((h) => h.status === key)?.changedAt;
   const terminalBad = status === "rejected" || status === "cancelled";

@@ -47,7 +47,6 @@ function validate(v: ServiceValues): Errors {
   return e;
 }
 
-/** Used by Add Service and by the Edit modal in My Services. The image goes to ImgBB through a file input. */
 export function ServiceForm({
   initial = emptyService,
   technician,
@@ -152,7 +151,6 @@ export function ServiceForm({
         <div className="flex flex-wrap items-center gap-4">
           <div className="flex h-24 w-36 items-center justify-center overflow-hidden rounded-lg border border-dashed bg-muted">
             {v.image ? (
-              // eslint-disable-next-line @next/next/no-img-element
               <img src={v.image} alt="Service preview" className="h-full w-full object-cover" />
             ) : (
               <ImagePlus className="h-7 w-7 text-muted-foreground" />
