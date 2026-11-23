@@ -40,7 +40,7 @@ export default function MyServicesPage() {
   const [deleting, setDeleting] = useState(false);
 
   async function toggle(s: Service, value: boolean) {
-    // optimistic update, rolled back on failure
+
     setData((d) => d && d.map((x) => (x._id === s._id ? { ...x, isAvailable: value } : x)));
     try {
       await api(`/api/services/${s._id}`, { method: "PATCH", body: { isAvailable: value } });
@@ -97,7 +97,7 @@ export default function MyServicesPage() {
                     <tr key={s._id}>
                       <td className="px-4 py-3">
                         <div className="flex items-center gap-3">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
+
                           <img src={s.image} alt="" className="h-12 w-16 rounded-md object-cover" />
                           <span className="max-w-[16rem] truncate font-semibold">{s.title}</span>
                         </div>
