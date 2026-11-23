@@ -18,7 +18,6 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, React.TextareaHTML
 );
 Textarea.displayName = "Textarea";
 
-/** Native select styled like the other fields (keeps forms light and fully accessible). */
 export const Select = React.forwardRef<HTMLSelectElement, React.SelectHTMLAttributes<HTMLSelectElement>>(
   ({ className, children, ...props }, ref) => (
     <select ref={ref} className={cn(fieldBase, "h-10", className)} {...props}>

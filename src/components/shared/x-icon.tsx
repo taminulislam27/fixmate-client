@@ -1,4 +1,3 @@
-/** The new X logo (brief: use it instead of the old Twitter bird). */
 export function XIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">

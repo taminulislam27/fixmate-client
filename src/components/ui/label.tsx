@@ -12,7 +12,6 @@ export const Label = React.forwardRef<
 ));
 Label.displayName = "Label";
 
-/** Label + field + inline error message, used by every form. */
 export function Field({
   label,
   htmlFor,
