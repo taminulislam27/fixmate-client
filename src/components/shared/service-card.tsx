@@ -19,12 +19,12 @@ export interface ServiceLite {
   reviewCount?: number;
 }
 
-/** Equal width + height card. Fixed image ratio, clamped title, footer pinned to the bottom. */
+
 export function ServiceCard({ s }: { s: ServiceLite }) {
   return (
     <Card className="group flex h-full flex-col overflow-hidden transition-all hover:-translate-y-1 hover:shadow-lg">
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
+
         <img
           src={s.image}
           alt={s.title}

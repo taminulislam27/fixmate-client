@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Wrench } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-/** Same size and style everywhere (navbar, footer, dashboard, auth pages). */
+
 export function Logo({ className, light = false }: { className?: string; light?: boolean }) {
   return (
     <Link href="/" className={cn("inline-flex items-center gap-2.5", className)} aria-label="FixMate home">

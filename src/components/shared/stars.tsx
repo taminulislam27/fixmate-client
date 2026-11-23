@@ -1,7 +1,7 @@
 import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-/** Read-only star display, with optional "4.5 (12)" label. */
+
 export function Stars({ value, count, size = "sm" }: { value: number; count?: number; size?: "sm" | "md" }) {
   const dim = size === "md" ? "h-5 w-5" : "h-4 w-4";
   if (!count) {
