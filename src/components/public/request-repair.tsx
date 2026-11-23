@@ -75,12 +75,11 @@ export function RequestRepair({ serviceId, serviceTitle }: { serviceId: string; 
     if (Object.keys(e).length) return;
     setLoading(true);
     try {
-      // await api("/api/bookings", { method: "POST", body: { serviceId, ...form } });
       await api("/api/bookings", {
         method: "POST",
         body: {
           serviceId,
-          customerPhone: form.phone, // the server expects this field name
+          customerPhone: form.phone,
           address: form.address,
           preferredDate: form.preferredDate,
           problemDescription: form.problemDescription,
