@@ -16,7 +16,7 @@ interface Payment {
   serviceTitle: string;
 }
 
-/** Asks the server to verify the Stripe session. The server saves the payment exactly once. */
+
 export function PaymentSuccess() {
   const sessionId = useSearchParams().get("session_id");
   const [state, setState] = useState<"loading" | "ok" | "error">("loading");
@@ -25,7 +25,7 @@ export function PaymentSuccess() {
   const started = useRef(false);
 
   useEffect(() => {
-    if (started.current) return; // React strict mode runs effects twice in dev
+    if (started.current) return; 
     started.current = true;
     if (!sessionId) {
       setState("error");
